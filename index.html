@@ -1,0 +1,471 @@
+<!-- index.html is wrapped by the platform head/body; this file is the full document root. -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TashaProMusic — Centrum Rozwoju Muzycznego · Bolesławiec</title>
+<meta name="description" content="TashaProMusic — Centrum Rozwoju Muzycznego w Bolesławcu. Lekcje śpiewu i pianina, dziecięcy zespół VIVAKIDS, koncerty i studio nagrań. Pierwsza lekcja próbna gratis." />
+<meta name="theme-color" content="#0A0912" />
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="TashaProMusic — Centrum Rozwoju Muzycznego" />
+<meta property="og:description" content="Lekcje śpiewu i pianina, zespół VIVAKIDS, koncerty i studio. Pierwsza lekcja gratis. Bolesławiec, Dolny Śląsk." />
+<meta property="og:locale" content="pl_PL" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+
+<!-- ========================= NAV ========================= -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="#top" aria-label="TashaProMusic">
+      <img class="brand__mark" src="assets/img/logo.svg" alt="" width="38" height="38" />
+      <span class="brand__text">
+        <span class="brand__name">TashaProMusic</span>
+        <span class="brand__sub">Centrum Rozwoju Muzycznego</span>
+      </span>
+    </a>
+
+    <nav class="nav__links" aria-label="Główne menu">
+      <a href="#about" data-i18n="nav.about">O nas</a>
+      <a href="#offer" data-i18n="nav.offer">Oferta</a>
+      <a href="#vivakids" data-i18n="nav.vivakids">VIVAKIDS</a>
+      <a href="#why" data-i18n="nav.why">Dlaczego my</a>
+      <a href="#contact" data-i18n="nav.contact">Kontakt</a>
+    </nav>
+
+    <div class="nav__actions">
+      <div class="lang" role="group" aria-label="Wybór języka">
+        <button type="button" data-lang="pl" class="is-active">PL</button>
+        <button type="button" data-lang="uk">UA</button>
+      </div>
+      <a href="#contact" class="btn btn--gold btn--sm" data-i18n="nav.cta">Bezpłatna lekcja</a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="scrim" id="scrim"></div>
+<aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#about" data-i18n="nav.about">O nas</a>
+  <a href="#offer" data-i18n="nav.offer">Oferta</a>
+  <a href="#vivakids" data-i18n="nav.vivakids">VIVAKIDS</a>
+  <a href="#why" data-i18n="nav.why">Dlaczego my</a>
+  <a href="#contact" data-i18n="nav.contact">Kontakt</a>
+  <div class="lang" role="group" aria-label="Język" style="align-self:flex-start;margin-top:10px">
+    <button type="button" data-lang="pl" class="is-active">PL</button>
+    <button type="button" data-lang="uk">UA</button>
+  </div>
+  <a href="#contact" class="btn btn--gold" data-i18n="nav.cta">Bezpłatna lekcja</a>
+</aside>
+
+<main id="top">
+  <!-- ========================= HERO ========================= -->
+  <section class="hero">
+    <span class="hero__orb hero__orb--1"></span>
+    <span class="hero__orb hero__orb--2"></span>
+    <div class="container">
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <span class="hero__badge" data-reveal>
+            <span class="pill" data-i18n="hero.pill">Nowość</span>
+            <span data-i18n="hero.badge">Centrum muzyczne w <b>Bolesławcu</b></span>
+          </span>
+          <h1 class="h-xl" data-reveal data-delay="1">
+            <span data-i18n="hero.title1">Odkryj swój</span>
+            <span class="text-gold" data-i18n="hero.title2">głos i talent</span>
+          </h1>
+          <p class="lead hero__sub" data-reveal data-delay="2" data-i18n="hero.sub">
+            Lekcje śpiewu i pianina, dziecięcy zespół sceniczny VIVAKIDS oraz własne studio nagrań. Profesjonalny pedagog z wykształceniem konserwatoryjnym — indywidualne podejście do każdego ucznia.
+          </p>
+          <div class="hero__cta" data-reveal data-delay="3">
+            <a href="#contact" class="btn btn--gold" data-i18n="hero.cta1">Zapisz się na bezpłatną lekcję</a>
+            <a href="#offer" class="btn btn--ghost" data-i18n="hero.cta2">Zobacz ofertę</a>
+          </div>
+          <div class="hero__proof" data-reveal data-delay="4">
+            <div class="proof"><span class="proof__n text-gold">1:1</span><span class="proof__l" data-i18n="hero.proof1">Indywidualne podejście</span></div>
+            <div class="proof"><span class="proof__n text-gold">GRATIS</span><span class="proof__l" data-i18n="hero.proof2">Pierwsza lekcja próbna</span></div>
+            <div class="proof"><span class="proof__n text-gold">PL · UA</span><span class="proof__l" data-i18n="hero.proof3">Zajęcia w dwóch językach</span></div>
+          </div>
+        </div>
+
+        <div class="hero__visual" data-reveal data-delay="2">
+          <div class="hero-card">
+            <div class="hero-card__glyph" aria-hidden="true">
+              <svg viewBox="0 0 200 200" fill="none">
+                <defs>
+                  <linearGradient id="hg" x1="40" y1="30" x2="160" y2="170" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F4D98A"/><stop offset="1" stop-color="#C1902F"/>
+                  </linearGradient>
+                </defs>
+                <path d="M118 34c-4 34-6 60-6 92a26 26 0 1 1-14-23V40l40-14v22l-20 7" stroke="url(#hg)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/>
+                <circle cx="86" cy="150" r="10" fill="url(#hg)"/>
+              </svg>
+            </div>
+            <div class="hero-card__tag">
+              <span data-i18n="hero.card.k">Kierownik artystyczny</span>
+              <b>Natasha · TashaProMusic</b>
+            </div>
+          </div>
+          <div class="hero-float hero-float--top">
+            <span class="hero-float__ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="2"/></svg>
+            </span>
+            <div><small data-i18n="hero.float1.s">Wokal & Pianino</small><b data-i18n="hero.float1.b">Dla dzieci i dorosłych</b></div>
+          </div>
+          <div class="hero-float hero-float--bottom">
+            <span class="hero-float__ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 6.9H22l-6 4.4 2.3 7-6.3-4.5L5.7 20l2.3-7-6-4.4h7.6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </span>
+            <div><small data-i18n="hero.float2.s">Zespół sceniczny</small><b>VIVAKIDS</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MARQUEE ===================== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__item">Wokal <span class="dot"></span></span>
+      <span class="marquee__item">Pianino <span class="dot"></span></span>
+      <span class="marquee__item">VIVAKIDS <span class="dot"></span></span>
+      <span class="marquee__item">VIVA STAGE <span class="dot"></span></span>
+      <span class="marquee__item">VIVA STUDIO <span class="dot"></span></span>
+      <span class="marquee__item">Koncerty <span class="dot"></span></span>
+      <span class="marquee__item">Wokal <span class="dot"></span></span>
+      <span class="marquee__item">Pianino <span class="dot"></span></span>
+      <span class="marquee__item">VIVAKIDS <span class="dot"></span></span>
+      <span class="marquee__item">VIVA STAGE <span class="dot"></span></span>
+      <span class="marquee__item">VIVA STUDIO <span class="dot"></span></span>
+      <span class="marquee__item">Koncerty <span class="dot"></span></span>
+    </div>
+  </div>
+
+  <!-- ========================= ABOUT ========================= -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__media" data-reveal>
+          <div class="about__portrait">
+            <svg viewBox="0 0 200 200" fill="none" aria-hidden="true">
+              <defs><linearGradient id="ag" x1="40" y1="30" x2="170" y2="180" gradientUnits="userSpaceOnUse"><stop stop-color="#A78BFA"/><stop offset="1" stop-color="#E7C067"/></linearGradient></defs>
+              <path d="M70 150V56l70-16v86" stroke="url(#ag)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="56" cy="150" r="15" fill="url(#ag)"/>
+              <circle cx="126" cy="134" r="15" fill="url(#ag)"/>
+            </svg>
+          </div>
+          <div class="about__badge">
+            <b data-i18n="about.badge.b">Konserwatorium</b>
+            <span data-i18n="about.badge.s">wykształcenie muzyczne pedagoga</span>
+          </div>
+        </div>
+        <div class="about__copy">
+          <div class="section-head">
+            <p class="eyebrow" data-i18n="about.eyebrow">O nas</p>
+            <h2 class="h-lg" data-i18n="about.title">Muzyka, która rozwija — od pierwszej nuty do sceny</h2>
+          </div>
+          <p data-i18n="about.p1">TashaProMusic to Centrum Rozwoju Muzycznego w Bolesławcu, założone z prostą misją: pomóc dzieciom i dorosłym odkryć własny talent i pokochać muzykę. Tu nie chodzi tylko o naukę nut — chodzi o pewność siebie, dyscyplinę i radość tworzenia.</p>
+          <p data-i18n="about.p2">Zajęcia prowadzi pedagog z wykształceniem konserwatoryjnym, a każdy uczeń otrzymuje indywidualny plan dopasowany do wieku, poziomu i celów. Naszą sceną jest dziecięcy zespół VIVAKIDS, a naszym atelier — własne studio nagrań VIVA STUDIO.</p>
+          <div class="sign">
+            <img src="assets/img/logo.svg" alt="" width="52" height="52" />
+            <div>
+              <div class="sign__name">Natasha</div>
+              <div class="sign__role" data-i18n="about.sign.role">Założycielka i kierownik artystyczny</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= OFFER ========================= -->
+  <section class="section" id="offer">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow" data-i18n="offer.eyebrow">Oferta</p>
+        <h2 class="h-lg" data-i18n="offer.title">Pięć kierunków jednego centrum</h2>
+        <p class="lead" data-i18n="offer.sub">Od pierwszej lekcji śpiewu po występ na scenie i profesjonalne nagranie — wszystko w jednym miejscu.</p>
+      </div>
+      <div class="offer__grid">
+
+        <article class="card" data-reveal>
+          <span class="card__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3Z" stroke="currentColor" stroke-width="1.8"/><path d="M6 11v1a6 6 0 0 0 12 0v-1M12 18v3M9 21h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          <h3 data-i18n="offer.vocal.t">Śpiew / Wokal</h3>
+          <p data-i18n="offer.vocal.d">Indywidualne i grupowe lekcje śpiewu — emisja głosu, oddech, interpretacja. Dla dzieci, młodzieży i dorosłych, na każdym poziomie.</p>
+          <span class="card__meta" data-i18n="offer.vocal.m">Indywidualnie i grupowo <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </article>
+
+        <article class="card" data-reveal data-delay="1">
+          <span class="card__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M7 4v9M11 4v9M15 4v9M19 4v9M3 13h18" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <h3 data-i18n="offer.piano.t">Pianino / Fortepian</h3>
+          <p data-i18n="offer.piano.d">Nauka gry na pianinie od podstaw — technika, czytanie nut, ulubione utwory. Spokojne tempo i przyjazna atmosfera.</p>
+          <span class="card__meta" data-i18n="offer.piano.m">Od podstaw do sceny <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </article>
+
+        <article class="card card--violet" data-reveal data-delay="2">
+          <span class="card__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 6.5H21l-5.2 4 2 6.5L12 16.5 6.2 20l2-6.5L3 9.5h6.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+          <h3 data-i18n="offer.vivakids.t">VIVAKIDS</h3>
+          <p data-i18n="offer.vivakids.d">Dziecięcy zespół wokalno-sceniczny. Repertuar polski, ukraiński i międzynarodowy, choreografia, występy i prawdziwa scena.</p>
+          <span class="card__meta" data-i18n="offer.vivakids.m">Zespół dla dzieci <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </article>
+
+        <article class="card card--wide" data-reveal>
+          <span class="card__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 10v4M7 6v12M11 3v18M15 6v12M19 10v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          <h3 data-i18n="offer.stage.t">VIVA STAGE — Koncerty i wydarzenia</h3>
+          <p data-i18n="offer.stage.d">Koncerty, gale świąteczne i występy naszych uczniów. Produkcja wydarzeń od pomysłu po scenę — miejsce, w którym rodzi się doświadczenie sceniczne i wspólnota.</p>
+          <span class="card__meta" data-i18n="offer.stage.m">Gale i koncerty sezonowe <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </article>
+
+        <article class="card" data-reveal data-delay="1">
+          <span class="card__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          <h3 data-i18n="offer.studio.t">VIVA STUDIO</h3>
+          <p data-i18n="offer.studio.d">Nagrania wokalne, teledyski i produkcja treści muzycznych — miejsce, w którym talent ucznia zamienia się w gotowy materiał.</p>
+          <span class="card__meta" data-i18n="offer.studio.m">Nagrania i teledyski <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= VIVAKIDS ========================= -->
+  <section class="section section--tight" id="vivakids">
+    <div class="container">
+      <div class="viva" data-reveal>
+        <svg class="viva__star" style="top:24px;right:36px;width:34px" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l2.4 6.9H22l-6 4.4 2.3 7-6.3-4.5L5.7 20l2.3-7-6-4.4h7.6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <div class="viva__copy">
+          <p class="eyebrow" data-i18n="viva.eyebrow">Nasza scena</p>
+          <h2 class="h-lg"><span class="text-gold">VIVAKIDS</span> <span data-i18n="viva.title">— dzieci, które błyszczą na scenie</span></h2>
+          <p class="lead" style="margin-top:14px" data-i18n="viva.sub">Zespół wokalno-sceniczny, w którym dzieci uczą się śpiewu, ruchu i pewności siebie — a potem pokazują to publiczności na prawdziwych koncertach.</p>
+          <ul class="viva__list">
+            <li><span class="tick">✓</span><span data-i18n="viva.li1">Repertuar polski, ukraiński i międzynarodowy jako bogactwo kultur</span></li>
+            <li><span class="tick">✓</span><span data-i18n="viva.li2">Śpiew, podstawy choreografii i praca z mikrofonem</span></li>
+            <li><span class="tick">✓</span><span data-i18n="viva.li3">Regularne występy: gale świąteczne, koncerty, wydarzenia lokalne</span></li>
+          </ul>
+          <div class="viva__ages">
+            <div class="age"><b>4–6</b><span data-i18n="viva.age1">VIVAKIDS Mini</span></div>
+            <div class="age"><b>7–12</b><span data-i18n="viva.age2">VIVAKIDS</span></div>
+            <div class="age"><b>13+</b><span data-i18n="viva.age3">Grupa młodzieżowa</span></div>
+          </div>
+          <a href="#contact" class="btn btn--gold" style="margin-top:30px" data-i18n="viva.cta">Zapytaj o casting</a>
+        </div>
+        <div class="viva__visual">
+          <div class="hero-card" style="aspect-ratio:1;border-radius:24px">
+            <div class="hero-card__glyph" aria-hidden="true">
+              <svg viewBox="0 0 200 200" fill="none">
+                <defs><linearGradient id="vk" x1="30" y1="20" x2="180" y2="180" gradientUnits="userSpaceOnUse"><stop stop-color="#F4D98A"/><stop offset="1" stop-color="#A78BFA"/></linearGradient></defs>
+                <path d="M100 24l14 40h42l-34 26 13 42-35-26-35 26 13-42-34-26h42z" stroke="url(#vk)" stroke-width="6" stroke-linejoin="round" fill="none"/>
+                <circle cx="100" cy="104" r="8" fill="url(#vk)"/>
+              </svg>
+            </div>
+            <div class="hero-card__tag">
+              <span data-i18n="viva.card.k">Dziecięcy zespół sceniczny</span>
+              <b>VIVAKIDS ★</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= WHY ========================= -->
+  <section class="section" id="why">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow" data-i18n="why.eyebrow">Dlaczego my</p>
+        <h2 class="h-lg" data-i18n="why.title">Więcej niż lekcje muzyki</h2>
+        <p class="lead" data-i18n="why.sub">Dzieci, które uczą się muzyki, lepiej radzą sobie z koncentracją, matematyką i pewnością siebie. My dbamy o cały ten rozwój.</p>
+      </div>
+      <div class="why__grid">
+        <div class="feat" data-reveal>
+          <span class="feat__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 4v5c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V7z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3 data-i18n="why.1.t">Pedagog z konserwatorium</h3>
+          <p data-i18n="why.1.d">Profesjonalne wykształcenie muzyczne i doświadczenie sceniczne w każdej lekcji.</p>
+        </div>
+        <div class="feat" data-reveal data-delay="1">
+          <span class="feat__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          <h3 data-i18n="why.2.t">Indywidualne podejście</h3>
+          <p data-i18n="why.2.d">Plan dopasowany do wieku, poziomu i marzeń każdego ucznia — bez schematów.</p>
+        </div>
+        <div class="feat" data-reveal data-delay="2">
+          <span class="feat__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-8.5C.5 8.5 3 5 6.5 5 9 5 12 8 12 8s3-3 5.5-3C21 5 23.5 8.5 21.5 12.5 19 16.65 12 21 12 21Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+          <h3 data-i18n="why.3.t">Pierwsza lekcja gratis</h3>
+          <p data-i18n="why.3.d">Bez zobowiązań — przyjdź, poznaj nas i przekonaj się, czy to miejsce dla Ciebie.</p>
+        </div>
+        <div class="feat" data-reveal>
+          <span class="feat__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20V10M9 20V4M14 20v-7M19 20V8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          <h3 data-i18n="why.4.t">Rozwój, nie tylko technika</h3>
+          <p data-i18n="why.4.d">Koncentracja, dyscyplina i pewność siebie, które procentują daleko poza muzyką.</p>
+        </div>
+        <div class="feat" data-reveal data-delay="1">
+          <span class="feat__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 18V9a8 8 0 0 1 16 0v9M4 18h4v-4H4zM20 18h-4v-4h4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+          <h3 data-i18n="why.5.t">Prawdziwa scena</h3>
+          <p data-i18n="why.5.d">Koncerty i występy VIVAKIDS dają dzieciom doświadczenie, którego nie da żadna sala.</p>
+        </div>
+        <div class="feat" data-reveal data-delay="2">
+          <span class="feat__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.7 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.7-3.5-9S9.5 5.5 12 3Z" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <h3 data-i18n="why.6.t">Zajęcia po polsku i ukraińsku</h3>
+          <p data-i18n="why.6.d">Czujemy się swobodnie w obu językach — mile widziane rodziny polskie i ukraińskie.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= STEPS ========================= -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow" data-i18n="steps.eyebrow">Jak zacząć</p>
+        <h2 class="h-lg" data-i18n="steps.title">Trzy proste kroki do pierwszej lekcji</h2>
+      </div>
+      <div class="steps">
+        <div class="step" data-reveal><span class="step__line"></span><span class="step__n">01</span><h3 data-i18n="steps.1.t">Napisz do nas</h3><p data-i18n="steps.1.d">Wypełnij formularz lub napisz na WhatsApp / Instagram. Odpowiadamy szybko i bez zobowiązań.</p></div>
+        <div class="step" data-reveal data-delay="1"><span class="step__line"></span><span class="step__n">02</span><h3 data-i18n="steps.2.t">Bezpłatna lekcja próbna</h3><p data-i18n="steps.2.d">Poznajesz pedagoga, instrument i atmosferę. Wspólnie ustalamy cele i plan.</p></div>
+        <div class="step" data-reveal data-delay="2"><span class="step__n">03</span><h3 data-i18n="steps.3.t">Zaczynasz regularne zajęcia</h3><p data-i18n="steps.3.d">Wybierasz dogodny termin i ruszamy. Krok po kroku — aż do sceny.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= FAQ ========================= -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
+        <h2 class="h-lg" data-i18n="faq.title">Najczęstsze pytania</h2>
+      </div>
+      <div class="faq">
+        <div class="acc"><button class="acc__q" data-i18n="faq.1.q">Czy trzeba mieć własny instrument?</button><div class="acc__a"><p data-i18n="faq.1.a">Na początek nie. Na lekcjach korzystamy z instrumentu w centrum. Z czasem, przy nauce gry na pianinie, warto mieć instrument do ćwiczeń w domu — chętnie doradzimy, jak wybrać pierwszy.</p></div></div>
+        <div class="acc"><button class="acc__q" data-i18n="faq.2.q">W jakim wieku można zacząć?</button><div class="acc__a"><p data-i18n="faq.2.a">Zapraszamy dzieci już od 4–6 lat (VIVAKIDS Mini), młodzież i dorosłych. Nigdy nie jest za późno, by zacząć śpiewać lub grać.</p></div></div>
+        <div class="acc"><button class="acc__q" data-i18n="faq.3.q">W jakim języku odbywają się zajęcia?</button><div class="acc__a"><p data-i18n="faq.3.a">Prowadzimy zajęcia po polsku i po ukraińsku — dopasowujemy się do ucznia. Repertuar VIVAKIDS łączy piosenki z różnych kultur Europy.</p></div></div>
+        <div class="acc"><button class="acc__q" data-i18n="faq.4.q">Czy pierwsza lekcja jest naprawdę bezpłatna?</button><div class="acc__a"><p data-i18n="faq.4.a">Tak. Pierwsza lekcja próbna jest całkowicie bezpłatna i bez zobowiązań — to okazja, by się poznać i sprawdzić, czy pasujemy do siebie.</p></div></div>
+        <div class="acc"><button class="acc__q" data-i18n="faq.5.q">Gdzie odbywają się zajęcia?</button><div class="acc__a"><p data-i18n="faq.5.a">Działamy w Bolesławcu (powiat bolesławiecki, Dolny Śląsk). Dokładny adres i dostępne terminy podamy przy zapisie na lekcję próbną.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= CONTACT ========================= -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow" data-i18n="contact.eyebrow">Kontakt</p>
+        <h2 class="h-lg" data-i18n="contact.title">Zapisz się na bezpłatną lekcję</h2>
+        <p class="lead" data-i18n="contact.sub">Zostaw wiadomość, a my skontaktujemy się z Tobą i ustalimy dogodny termin.</p>
+      </div>
+      <div class="contact__grid">
+        <div class="contact__info">
+          <a class="info-item" href="mailto:tashapromusic@gmail.com">
+            <span class="info-item__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span><small data-i18n="contact.email">E-mail</small><b>tashapromusic@gmail.com</b></span>
+          </a>
+          <a class="info-item" href="https://wa.me/000000000" target="_blank" rel="noopener" data-wa>
+            <span class="info-item__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 9c0 3 3 6 6 6l-1.5-2-2 .8L9.5 11z" fill="currentColor"/></svg></span>
+            <span><small data-i18n="contact.wa">WhatsApp</small><b data-i18n="contact.wa.b">Napisz do nas</b></span>
+          </a>
+          <div class="info-item">
+            <span class="info-item__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg></span>
+            <span><small data-i18n="contact.loc">Lokalizacja</small><b>Bolesławiec · Dolny Śląsk</b></span>
+          </div>
+          <div class="info-item">
+            <span class="info-item__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span><small data-i18n="contact.hours">Godziny zajęć</small><b data-i18n="contact.hours.b">Pon.–Sob., po umówieniu</b></span>
+          </div>
+          <div style="padding:4px 22px">
+            <small style="color:var(--muted-2);text-transform:uppercase;letter-spacing:.04em;font-size:.78rem" data-i18n="contact.follow">Obserwuj nas</small>
+            <div class="socials" style="margin-top:12px">
+              <a href="https://instagram.com/tashapromusic.pl" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+              <a href="https://facebook.com/tashapromusic" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 8h2V5h-2c-2 0-3 1.3-3 3v2H9v3h2v6h3v-6h2l1-3h-3V8.6c0-.4.3-.6.6-.6H14Z" fill="currentColor"/></svg></a>
+              <a href="https://tiktok.com/@tashapromusic" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none"><path d="M14 4c.5 2.3 2 3.8 4.5 4v3c-1.7 0-3.2-.5-4.5-1.4V15a5.5 5.5 0 1 1-5.5-5.5c.3 0 .7 0 1 .1v3.1a2.5 2.5 0 1 0 1.5 2.3V4z" fill="currentColor"/></svg></a>
+              <a href="https://youtube.com/@tashapromusic" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="m11 9 4 3-4 3z" fill="currentColor"/></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <form class="form" id="leadForm" novalidate>
+          <div class="field">
+            <label for="f-name" data-i18n="form.name">Imię i nazwisko</label>
+            <input id="f-name" name="name" type="text" required data-i18n-ph="form.name.ph" placeholder="Jak się do Ciebie zwracać?" />
+          </div>
+          <div class="field">
+            <label for="f-contact" data-i18n="form.contact">Telefon lub e-mail</label>
+            <input id="f-contact" name="contact" type="text" required data-i18n-ph="form.contact.ph" placeholder="Jak możemy się skontaktować?" />
+          </div>
+          <div class="field">
+            <label for="f-dir" data-i18n="form.dir">Interesuje mnie</label>
+            <select id="f-dir" name="direction">
+              <option data-i18n="form.dir.vocal">Śpiew / Wokal</option>
+              <option data-i18n="form.dir.piano">Pianino</option>
+              <option data-i18n="form.dir.vivakids">VIVAKIDS (zespół dziecięcy)</option>
+              <option data-i18n="form.dir.studio">VIVA STUDIO (nagrania)</option>
+              <option data-i18n="form.dir.other">Coś innego</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-msg" data-i18n="form.msg">Wiadomość</label>
+            <textarea id="f-msg" name="message" data-i18n-ph="form.msg.ph" placeholder="Napisz kilka słów o sobie lub dziecku — wiek, poziom, oczekiwania."></textarea>
+          </div>
+          <button type="submit" class="btn btn--gold btn--block" data-i18n="form.submit">Wyślij zgłoszenie</button>
+          <p class="form__note" data-i18n="form.note">Klikając „Wyślij”, otworzysz gotową wiadomość w swojej aplikacji. Pierwsza lekcja próbna jest bezpłatna.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= CTA BAND ========================= -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="cta-band" data-reveal>
+        <h2 class="h-lg" data-i18n="cta.title">Pierwsza lekcja jest po prostu... pierwszym krokiem</h2>
+        <p data-i18n="cta.sub">Nie musisz mieć doświadczenia ani instrumentu. Wystarczy chęć, by spróbować.</p>
+        <a href="#contact" class="btn btn--gold" data-i18n="cta.btn">Umów bezpłatną lekcję</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ========================= FOOTER ========================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="#top">
+          <img class="brand__mark" src="assets/img/logo.svg" alt="" width="38" height="38" />
+          <span class="brand__text">
+            <span class="brand__name">TashaProMusic</span>
+            <span class="brand__sub">Centrum Rozwoju Muzycznego</span>
+          </span>
+        </a>
+        <p data-i18n="footer.about">Centrum Rozwoju Muzycznego w Bolesławcu. Śpiew, pianino, dziecięcy zespół VIVAKIDS, koncerty i studio nagrań.</p>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="footer.nav">Nawigacja</h4>
+        <a href="#about" data-i18n="nav.about">O nas</a>
+        <a href="#offer" data-i18n="nav.offer">Oferta</a>
+        <a href="#vivakids" data-i18n="nav.vivakids">VIVAKIDS</a>
+        <a href="#faq" data-i18n="footer.faq">FAQ</a>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="footer.offer">Kierunki</h4>
+        <a href="#offer" data-i18n="offer.vocal.t">Śpiew / Wokal</a>
+        <a href="#offer" data-i18n="offer.piano.t">Pianino</a>
+        <a href="#vivakids">VIVAKIDS</a>
+        <a href="#offer">VIVA STUDIO</a>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="footer.social">Social media</h4>
+        <a href="https://instagram.com/tashapromusic.pl" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://facebook.com/tashapromusic" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://tiktok.com/@tashapromusic" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://youtube.com/@tashapromusic" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> TashaProMusic · Bolesławiec, Dolny Śląsk</span>
+      <span data-i18n="footer.made">Muzyka, która rozwija ✦</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
