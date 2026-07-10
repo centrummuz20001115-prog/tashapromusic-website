@@ -57,6 +57,8 @@ Poniższe miejsca zawierają dane tymczasowe (placeholdery) — podmień na praw
 | `index.html` → `tashapromusic@gmail.com` | docelowy adres e-mail (jeśli inny) |
 | FAQ / kontakt → dokładny adres | pełny adres zajęć w Bolesławcu |
 | `assets/img/` | prawdziwe zdjęcia i logo (obecnie elegancki placeholder SVG) |
+| `sitemap.xml` + `robots.txt` | podmień domenę `https://tashapromusic.pl/` na docelowy adres |
+| `index.html` → blok `application/ld+json` | zaktualizuj dane firmy (adres, telefon) dla SEO / Google |
 
 Formularz kontaktowy otwiera gotową wiadomość e-mail (`mailto:`). Aby zbierać
 zgłoszenia bez klienta poczty, można podłączyć usługę typu Formspree lub własny

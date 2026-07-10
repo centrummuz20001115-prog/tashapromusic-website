@@ -1,4 +1,6 @@
-<!-- index.html is wrapped by the platform head/body; this file is the full document root. -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>TashaProMusic — Centrum Rozwoju Muzycznego · Bolesławiec</title>
@@ -15,6 +17,39 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/css/styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicSchool",
+  "name": "TashaProMusic — Centrum Rozwoju Muzycznego",
+  "description": "Centrum Rozwoju Muzycznego w Bolesławcu: lekcje śpiewu i pianina, dziecięcy zespół sceniczny VIVAKIDS, koncerty i studio nagrań.",
+  "email": "tashapromusic@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bolesławiec",
+    "addressRegion": "Dolny Śląsk",
+    "addressCountry": "PL"
+  },
+  "areaServed": "Powiat bolesławiecki, Dolny Śląsk",
+  "knowsLanguage": ["pl", "uk"],
+  "sameAs": [
+    "https://instagram.com/tashapromusic.pl",
+    "https://facebook.com/tashapromusic",
+    "https://tiktok.com/@tashapromusic",
+    "https://youtube.com/@tashapromusic"
+  ],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lekcje śpiewu / wokal" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lekcje gry na pianinie" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "VIVAKIDS — dziecięcy zespół sceniczny" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "VIVA STAGE — koncerty i wydarzenia" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "VIVA STUDIO — nagrania i teledyski" } }
+  ]
+}
+</script>
+</head>
+<body>
 
 <!-- ========================= NAV ========================= -->
 <header class="nav" id="nav">
@@ -468,3 +503,5 @@
 </footer>
 
 <script src="assets/js/main.js"></script>
+</body>
+</html>
