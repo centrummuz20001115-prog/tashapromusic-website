@@ -54,27 +54,59 @@
     });
   });
 
-  /* ---------- Lead form → open a ready-made e-mail ---------- */
+  /* ---------- Lead form → TPMOS API (fallback: e-mail) ---------- */
   const form = document.getElementById("leadForm");
   if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const get = (n) => (form.querySelector('[name="' + n + '"]') || {}).value || "";
-      const name = get("name").trim();
-      const contact = get("contact").trim();
-      const dir = get("direction");
-      const msg = get("message").trim();
+    const api = (form.dataset.api || "").replace(/\/+$/, "");
 
+    const sendMailto = (name, contact, dir, msg) => {
       const subject = "Zapis na zajęcia — TashaProMusic";
       const body =
         "Imię: " + name + "\n" +
         "Kontakt: " + contact + "\n" +
         "Kierunek: " + dir + "\n" +
         "Wiadomość: " + msg + "\n";
-
       window.location.href =
         "mailto:tashapromusic@gmail.com?subject=" +
         encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    };
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const get = (n) => (form.querySelector('[name="' + n + '"]') || {}).value || "";
+      const name = get("name").trim();
+      const contact = get("contact").trim();
+      const dir = get("direction");
+      const dirLabel = (form.querySelector('[name="direction"] option:checked') || {}).textContent || dir;
+      const msg = get("message").trim();
+
+      if (!api) return sendMailto(name, contact, dirLabel, msg);
+
+      const btn = form.querySelector('button[type="submit"]');
+      const btnText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = "Wysyłanie…";
+      try {
+        const res = await fetch(api + "/api/leads", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: name,
+            contact: contact,
+            language: "pl",
+            serviceId: dir || undefined,
+            message: msg || undefined
+          })
+        });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        form.reset();
+        btn.textContent = "Dziękujemy! Odezwiemy się wkrótce ✓";
+        setTimeout(() => { btn.textContent = btnText; btn.disabled = false; }, 6000);
+      } catch (_err) {
+        btn.textContent = btnText;
+        btn.disabled = false;
+        sendMailto(name, contact, dirLabel, msg); // awaria API → e-mail
+      }
     });
   }
 
