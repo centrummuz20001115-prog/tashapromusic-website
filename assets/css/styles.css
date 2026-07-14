@@ -584,3 +584,38 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 
 /* Reveal stagger inside a group */
 .offer__grid [data-reveal].in, .why__grid [data-reveal].in { transition-delay: .05s; }
+
+/* =============================================================
+   Gallery (masonry) + lightbox
+   ============================================================= */
+.gallery { column-count: 4; column-gap: 12px; }
+.gallery__item {
+  display: block; width: 100%; margin: 0 0 12px; padding: 0; border: 0;
+  background: none; cursor: pointer; border-radius: 14px; overflow: hidden;
+  position: relative; break-inside: avoid; box-shadow: var(--shadow);
+}
+.gallery__item img { width: 100%; height: auto; display: block; border-radius: 14px; transition: transform .6s cubic-bezier(.2,.8,.2,1); }
+.gallery__item::after {
+  content: ""; position: absolute; inset: 0; border-radius: 14px;
+  background: linear-gradient(to top, rgba(10,9,18,.45), transparent 42%);
+  opacity: 0; transition: opacity .3s;
+}
+.gallery__item:hover img { transform: scale(1.06); }
+.gallery__item:hover::after { opacity: 1; }
+@media (max-width: 1000px) { .gallery { column-count: 3; } }
+@media (max-width: 720px)  { .gallery { column-count: 2; } }
+@media (max-width: 440px)  { .gallery { column-count: 1; } }
+
+.lightbox {
+  position: fixed; inset: 0; z-index: 300; display: flex; align-items: center; justify-content: center;
+  padding: 24px; background: rgba(5,4,12,.92); backdrop-filter: blur(8px);
+  opacity: 0; visibility: hidden; transition: opacity .3s, visibility .3s;
+}
+.lightbox.open { opacity: 1; visibility: visible; }
+.lightbox__img { max-width: min(94vw, 1100px); max-height: 90vh; border-radius: 14px; box-shadow: var(--shadow); }
+.lightbox__close {
+  position: absolute; top: 18px; right: 22px; width: 46px; height: 46px; border-radius: 50%;
+  border: 1px solid var(--line-soft); background: rgba(255,255,255,.06); color: var(--cream);
+  font-size: 1.7rem; line-height: 1; cursor: pointer; transition: background .2s, border-color .2s, color .2s;
+}
+.lightbox__close:hover { border-color: var(--gold); color: var(--gold); }

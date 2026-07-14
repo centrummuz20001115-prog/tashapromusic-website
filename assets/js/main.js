@@ -146,6 +146,35 @@
     });
   }
 
+  /* ---------- Gallery lightbox ---------- */
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const lightboxClose = document.getElementById("lightboxClose");
+  if (lightbox && lightboxImg) {
+    const open = (src, alt) => {
+      lightboxImg.src = src;
+      lightboxImg.alt = alt || "";
+      lightbox.classList.add("open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    };
+    const close = () => {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      setTimeout(() => { lightboxImg.src = ""; }, 300);
+    };
+    document.querySelectorAll(".gallery__item").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const img = btn.querySelector("img");
+        open(btn.getAttribute("data-full") || (img && img.src), img && img.alt);
+      });
+    });
+    lightbox.addEventListener("click", (e) => { if (e.target === lightbox) close(); });
+    if (lightboxClose) lightboxClose.addEventListener("click", close);
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+  }
+
   /* ---------- Footer year ---------- */
   const yr = document.getElementById("year");
   if (yr) yr.textContent = new Date().getFullYear();

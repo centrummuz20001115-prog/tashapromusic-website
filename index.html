@@ -70,7 +70,7 @@
       <a href="#about" data-i18n="nav.about">O nas</a>
       <a href="#offer" data-i18n="nav.offer">Oferta</a>
       <a href="#vivakids" data-i18n="nav.vivakids">VIVAKIDS</a>
-      <a href="#why" data-i18n="nav.why">Dlaczego my</a>
+      <a href="#gallery">Galeria</a>
       <a href="#contact" data-i18n="nav.contact">Kontakt</a>
     </nav>
 
@@ -88,6 +88,7 @@
   <a href="#about" data-i18n="nav.about">O nas</a>
   <a href="#offer" data-i18n="nav.offer">Oferta</a>
   <a href="#vivakids" data-i18n="nav.vivakids">VIVAKIDS</a>
+  <a href="#gallery">Galeria</a>
   <a href="#why" data-i18n="nav.why">Dlaczego my</a>
   <a href="#contact" data-i18n="nav.contact">Kontakt</a>
   <a href="#contact" class="btn btn--gold">Zapisz się</a>
@@ -279,6 +280,26 @@
     </div>
   </section>
 
+  <!-- ========================= GALLERY ========================= -->
+  <section class="section section--tight" id="gallery">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <p class="eyebrow">Galeria</p>
+        <h2 class="h-lg">Nasze występy i zajęcia</h2>
+      </div>
+      <div class="gallery" data-reveal>
+        <button class="gallery__item" type="button" data-full="assets/img/gallery/g1.jpg"><img src="assets/img/gallery/g1.jpg" alt="Występ zespołu VIVAKIDS na scenie" loading="lazy" /></button>
+        <button class="gallery__item" type="button" data-full="assets/img/gallery/g3.jpg"><img src="assets/img/gallery/g3.jpg" alt="Lekcja gry na pianinie" loading="lazy" /></button>
+        <button class="gallery__item" type="button" data-full="assets/img/gallery/g2.jpg"><img src="assets/img/gallery/g2.jpg" alt="Uczniowie TashaProMusic z nagrodą" loading="lazy" /></button>
+        <button class="gallery__item" type="button" data-full="assets/img/gallery/g5.jpg"><img src="assets/img/gallery/g5.jpg" alt="Uczniowie podczas wspólnej zabawy" loading="lazy" /></button>
+        <button class="gallery__item" type="button" data-full="assets/img/gallery/g4.jpg"><img src="assets/img/gallery/g4.jpg" alt="Występ solowy — śpiew" loading="lazy" /></button>
+        <button class="gallery__item" type="button" data-full="assets/img/gallery/g6.jpg"><img src="assets/img/gallery/g6.jpg" alt="Zespół VIVAKIDS — portret sceniczny" loading="lazy" /></button>
+        <button class="gallery__item" type="button" data-full="assets/img/gallery/g7.jpg"><img src="assets/img/gallery/g7.jpg" alt="Próba wokalna przy mikrofonie" loading="lazy" /></button>
+        <button class="gallery__item" type="button" data-full="assets/img/gallery/g8.jpg"><img src="assets/img/gallery/g8.jpg" alt="Zespół podczas zajęć" loading="lazy" /></button>
+      </div>
+    </div>
+  </section>
+
   <!-- ========================= WHY ========================= -->
   <section class="section" id="why">
     <div class="container">
@@ -464,6 +485,11 @@
     </div>
   </div>
 </footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Podgląd zdjęcia">
+  <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Zamknij">&times;</button>
+  <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+</div>
 
 <script src="assets/js/main.js"></script>
 </body>
