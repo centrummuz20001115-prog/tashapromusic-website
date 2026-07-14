@@ -78,6 +78,28 @@
     });
   }
 
+  /* ---------- WhatsApp / message button → focus the form ---------- */
+  const wa = document.querySelector("[data-wa]");
+  if (wa) {
+    wa.addEventListener("click", () => {
+      setTimeout(() => {
+        const n = document.getElementById("f-name");
+        if (n) n.focus({ preventScroll: true });
+      }, 480);
+    });
+  }
+
+  /* ---------- Smooth-scroll offset handled by CSS; ensure anchor buttons work ---------- */
+  document.querySelectorAll('a[href^="#"]').forEach((a) => {
+    a.addEventListener("click", (e) => {
+      const id = a.getAttribute("href");
+      if (id.length > 1) {
+        const t = document.querySelector(id);
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: "smooth", block: "start" }); history.replaceState(null, "", id); }
+      }
+    });
+  });
+
   /* ---------- Footer year ---------- */
   const yr = document.getElementById("year");
   if (yr) yr.textContent = new Date().getFullYear();
