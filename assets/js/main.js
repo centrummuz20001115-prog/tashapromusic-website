@@ -73,7 +73,7 @@
         "Wiadomość: " + msg + "\n";
 
       window.location.href =
-        "mailto:tashapromusic@gmail.com?subject=" +
+        "mailto:centrummuz20001115@gmail.com?subject=" +
         encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
     });
   }

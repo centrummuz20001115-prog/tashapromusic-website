@@ -54,7 +54,7 @@ Poniższe miejsca zawierają dane tymczasowe (placeholdery) — podmień na praw
 |-------|--------------|
 | `index.html` → sekcja `#contact`, link `data-wa` (`wa.me/000000000`) | prawdziwy numer WhatsApp |
 | `index.html` → linki social (`instagram.com/...`, `facebook.com/...`, `tiktok.com/...`, `youtube.com/...`) | rzeczywiste adresy profili |
-| `index.html` → `tashapromusic@gmail.com` | docelowy adres e-mail (jeśli inny) |
+| `index.html` → `centrummuz20001115@gmail.com` | docelowy adres e-mail (jeśli inny) |
 | FAQ / kontakt → dokładny adres | pełny adres zajęć w Bolesławcu |
 | `assets/img/` | prawdziwe zdjęcia i logo (obecnie elegancki placeholder SVG) |
 | `sitemap.xml` + `robots.txt` | podmień domenę `https://tashapromusic.pl/` na docelowy adres |
