@@ -252,7 +252,7 @@ body.menu-open .burger span:nth-child(3) { transform: translateY(-6px) rotate(-4
 /* Director photo overlay — sits above the fallback mark once assets/img/director.jpg exists */
 .hero-card__photo {
   position: absolute; inset: 0; z-index: 1;
-  background-size: cover; background-position: center top; background-repeat: no-repeat;
+  background-size: cover; background-position: center; background-repeat: no-repeat;
 }
 .hero-card__tag {
   position: relative; z-index: 2; width: 100%;
