@@ -425,7 +425,9 @@ body.menu-open .burger span:nth-child(3) { transform: translateY(-6px) rotate(-4
   width: 100%; padding: 14px 16px; border-radius: 12px;
   background: rgba(255,255,255,0.03); border: 1px solid var(--line-soft);
   color: var(--cream); font-family: inherit; font-size: 0.98rem; transition: border-color .25s, background .25s;
+  color-scheme: dark;
 }
+.field select option { color: var(--cream); background: #17132a; }
 .field input:focus, .field textarea:focus, .field select:focus { outline: none; border-color: var(--gold); background: rgba(255,255,255,0.05); }
 .field textarea { resize: vertical; min-height: 88px; }
 .form__note { font-size: 0.8rem; color: var(--muted-2); margin-top: 14px; text-align: center; }
