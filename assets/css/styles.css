@@ -340,6 +340,10 @@ body.menu-open .burger span:nth-child(3) { transform: translateY(-6px) rotate(-4
 .card__meta svg { width: 15px; transition: transform .25s; }
 .card:hover .card__meta svg { transform: translateX(4px); }
 .card--wide { grid-column: span 2; }
+/* Title-only offer cards (icon + name) */
+.card--title { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; min-height: 152px; }
+.card--title .card__ic { margin-bottom: 18px; }
+.card--title h3 { margin-bottom: 0; }
 
 /* ---------- VIVAKIDS feature ---------- */
 .viva {
