@@ -100,6 +100,52 @@
     });
   });
 
+  /* ---------- Scroll progress bar ---------- */
+  const progress = document.getElementById("scrollProgress");
+  if (progress) {
+    const updateProgress = () => {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      progress.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + "%";
+    };
+    updateProgress();
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("resize", updateProgress);
+  }
+
+  /* ---------- Scrollspy: highlight the nav link of the section in view ---------- */
+  const navLinks = Array.from(document.querySelectorAll('.nav__links a[href^="#"]'));
+  const sections = navLinks
+    .map((a) => document.querySelector(a.getAttribute("href")))
+    .filter(Boolean);
+  if (sections.length && "IntersectionObserver" in window) {
+    const spy = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = "#" + entry.target.id;
+            navLinks.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === id));
+          }
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+    );
+    sections.forEach((s) => spy.observe(s));
+  }
+
+  /* ---------- Hero cursor spotlight ---------- */
+  const hero = document.querySelector(".hero");
+  const spot = document.querySelector(".hero__spot");
+  const fine = window.matchMedia("(pointer: fine)").matches;
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (hero && spot && fine && !reduce) {
+    hero.addEventListener("mousemove", (e) => {
+      const r = hero.getBoundingClientRect();
+      spot.style.setProperty("--mx", ((e.clientX - r.left) / r.width) * 100 + "%");
+      spot.style.setProperty("--my", ((e.clientY - r.top) / r.height) * 100 + "%");
+    });
+  }
+
   /* ---------- Footer year ---------- */
   const yr = document.getElementById("year");
   if (yr) yr.textContent = new Date().getFullYear();
