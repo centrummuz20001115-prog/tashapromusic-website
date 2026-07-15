@@ -638,3 +638,9 @@ a.card--title { text-decoration: none; color: inherit; }
 
 /* Highlight the pre-selected direction in the form */
 .field select.flash { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(231,192,103,0.25); }
+
+/* VIVAKIDS caption flush to the bottom edge of the photo */
+.viva__visual .hero-card__tag {
+  position: absolute; left: 0; right: 0; bottom: 0; width: 100%;
+  border-radius: 0; border: 0; border-top: 1px solid var(--line-soft);
+}
