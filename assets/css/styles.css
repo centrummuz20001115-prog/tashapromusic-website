@@ -102,8 +102,8 @@ body::before {
 
 h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.08; margin: 0; letter-spacing: -0.01em; }
 
-.h-xl { font-size: clamp(2.5rem, 5.6vw, 4.4rem); }
-.h-lg { font-size: clamp(1.85rem, 3.8vw, 2.9rem); }
+.h-xl { font-size: clamp(2.8rem, 7vw, 5.4rem); }
+.h-lg { font-size: clamp(2.1rem, 4.6vw, 3.5rem); }
 .h-md { font-size: clamp(1.5rem, 2.6vw, 2rem); }
 
 .lead { font-size: clamp(1.05rem, 1.6vw, 1.22rem); color: var(--muted); }
@@ -238,7 +238,7 @@ body.menu-open .burger span:nth-child(3) { transform: translateY(-6px) rotate(-4
 
 .hero__proof { display: flex; flex-wrap: wrap; gap: 18px 34px; }
 .proof { display: flex; flex-direction: column; gap: 2px; }
-.proof__n { font-family: var(--font-display); font-size: 1.7rem; font-weight: 700; }
+.proof__n { font-family: var(--font-display); font-size: 1.9rem; font-weight: 700; }
 .proof__l { font-size: 0.82rem; color: var(--muted-2); letter-spacing: .02em; }
 
 /* Hero visual card */
@@ -389,7 +389,7 @@ body.menu-open .burger span:nth-child(3) { transform: translateY(-6px) rotate(-4
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; counter-reset: step; }
 .step { position: relative; padding: 26px 24px 24px; border-radius: var(--radius); background: linear-gradient(180deg, var(--surface), var(--bg-2)); border: 1px solid var(--line-soft); transition: transform .3s cubic-bezier(.2,.8,.2,1), border-color .3s; }
 .step:hover { transform: translateY(-4px); border-color: var(--line); }
-.step__n { font-family: var(--font-display); font-size: 2.5rem; line-height: 1; background: var(--grad-gold); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px; display: block; }
+.step__n { font-family: var(--font-display); font-size: 3.2rem; line-height: 1; background: var(--grad-gold); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; display: block; }
 .step h3 { font-size: 1.3rem; margin-bottom: 8px; }
 .step p { color: var(--muted); font-size: 0.95rem; margin: 0; }
 .step__line { position: absolute; top: 52px; right: -22px; width: 22px; height: 2px; background: var(--line); }
