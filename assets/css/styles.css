@@ -624,3 +624,17 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 @media (max-width: 720px) {
   .viva__visual .hero-card__tag { display: none; }
 }
+
+/* Clickable offer cards */
+a.card--title { text-decoration: none; color: inherit; }
+.card__go {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 12px;
+  font-size: 0.82rem; font-weight: 700; letter-spacing: .02em; color: var(--gold);
+  opacity: 0; transform: translateY(4px); transition: opacity .3s, transform .3s;
+}
+.card__go svg { width: 15px; transition: transform .25s; }
+.card--title:hover .card__go, .card--title:focus-visible .card__go { opacity: 1; transform: none; }
+.card--title:hover .card__go svg { transform: translateX(3px); }
+
+/* Highlight the pre-selected direction in the form */
+.field select.flash { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(231,192,103,0.25); }

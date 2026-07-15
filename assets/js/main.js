@@ -175,6 +175,17 @@
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
   }
 
+  /* ---------- Offer cards → preselect direction in the form ---------- */
+  const dirSelect = document.getElementById("f-dir");
+  document.querySelectorAll(".offer__grid .card[data-dir]").forEach((card) => {
+    card.addEventListener("click", () => {
+      if (!dirSelect) return;
+      dirSelect.value = card.getAttribute("data-dir");
+      dirSelect.classList.add("flash");
+      setTimeout(() => dirSelect.classList.remove("flash"), 1600);
+    });
+  });
+
   /* ---------- Footer year ---------- */
   const yr = document.getElementById("year");
   if (yr) yr.textContent = new Date().getFullYear();
