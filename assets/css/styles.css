@@ -619,3 +619,8 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
   font-size: 1.7rem; line-height: 1; cursor: pointer; transition: background .2s, border-color .2s, color .2s;
 }
 .lightbox__close:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Hide the VIVAKIDS photo caption on mobile */
+@media (max-width: 720px) {
+  .viva__visual .hero-card__tag { display: none; }
+}
