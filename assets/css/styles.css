@@ -42,7 +42,7 @@
   --maxw:        1200px;
   --nav-h:       76px;
 
-  --font-display: "Cormorant Garamond", "Georgia", serif;
+  --font-display: "Bricolage Grotesque", "Manrope", system-ui, sans-serif;
   --font-sans: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
@@ -57,7 +57,7 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.65;
-  font-size: 19px;
+  font-size: 20px;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -100,13 +100,13 @@ body::before {
 .section-head.center { margin-inline: auto; text-align: center; }
 .section-head.center .eyebrow::before { display: none; }
 
-h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.08; margin: 0; letter-spacing: -0.01em; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.05; margin: 0; letter-spacing: -0.02em; }
 
-.h-xl { font-size: clamp(2.8rem, 7vw, 5.4rem); }
-.h-lg { font-size: clamp(2.1rem, 4.6vw, 3.5rem); }
-.h-md { font-size: clamp(1.5rem, 2.6vw, 2rem); }
+.h-xl { font-size: clamp(3.1rem, 7.6vw, 6rem); font-weight: 800; }
+.h-lg { font-size: clamp(2.35rem, 5vw, 3.9rem); font-weight: 800; }
+.h-md { font-size: clamp(1.65rem, 2.9vw, 2.25rem); font-weight: 700; }
 
-.lead { font-size: clamp(1.05rem, 1.6vw, 1.22rem); color: var(--muted); }
+.lead { font-size: clamp(1.15rem, 1.7vw, 1.32rem); color: var(--muted); }
 
 .text-gold {
   background: var(--grad-gold);
