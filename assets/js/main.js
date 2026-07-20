@@ -186,6 +186,55 @@
     });
   });
 
+  /* ---------- Video modal (VIVASTAGE / VIVASTUDIO / VIVAMEDIA) ---------- */
+  const videoModal = document.getElementById("videoModal");
+  const videoFrame = document.getElementById("videoFrame");
+  const videoThumbs = document.getElementById("videoThumbs");
+  const videoClose = document.getElementById("videoClose");
+  if (videoModal && videoFrame) {
+    const loadVideo = (id) => {
+      videoFrame.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+      videoThumbs.querySelectorAll(".vmodal__thumb").forEach((t) =>
+        t.classList.toggle("active", t.getAttribute("data-id") === id)
+      );
+    };
+    const openVideos = (ids) => {
+      videoThumbs.innerHTML = "";
+      ids.forEach((id) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "vmodal__thumb";
+        b.setAttribute("data-id", id);
+        b.innerHTML = '<img src="https://i.ytimg.com/vi/' + id + '/hqdefault.jpg" alt="" loading="lazy" />';
+        b.addEventListener("click", () => loadVideo(id));
+        videoThumbs.appendChild(b);
+      });
+      videoThumbs.style.display = ids.length > 1 ? "flex" : "none";
+      videoModal.classList.add("open");
+      videoModal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      loadVideo(ids[0]);
+    };
+    const closeVideo = () => {
+      videoModal.classList.remove("open");
+      videoModal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      videoFrame.src = "";
+    };
+    document.querySelectorAll(".card--video[data-videos]").forEach((card) => {
+      const act = (e) => {
+        e.preventDefault();
+        const ids = card.getAttribute("data-videos").split(",").map((s) => s.trim()).filter(Boolean);
+        if (ids.length) openVideos(ids);
+      };
+      card.addEventListener("click", act);
+      card.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") act(e); });
+    });
+    videoModal.addEventListener("click", (e) => { if (e.target === videoModal) closeVideo(); });
+    if (videoClose) videoClose.addEventListener("click", closeVideo);
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && videoModal.classList.contains("open")) closeVideo(); });
+  }
+
   /* ---------- Footer year ---------- */
   const yr = document.getElementById("year");
   if (yr) yr.textContent = new Date().getFullYear();

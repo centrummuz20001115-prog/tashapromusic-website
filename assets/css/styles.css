@@ -620,6 +620,35 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 }
 .lightbox__close:hover { border-color: var(--gold); color: var(--gold); }
 
+/* ---------- Video modal (VIVASTAGE / VIVASTUDIO) ---------- */
+.card--video { cursor: pointer; }
+.vmodal {
+  position: fixed; inset: 0; z-index: 300; display: none; align-items: center; justify-content: center;
+  padding: 24px; background: rgba(5,4,12,.92); backdrop-filter: blur(8px);
+}
+.vmodal.open { display: flex; }
+.vmodal__inner { width: min(960px, 100%); }
+.vmodal__player {
+  position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000;
+  border-radius: 16px; overflow: hidden; box-shadow: var(--shadow);
+}
+.vmodal__player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.vmodal__thumbs { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 16px; }
+.vmodal__thumb {
+  width: 140px; aspect-ratio: 16 / 9; border-radius: 10px; overflow: hidden; padding: 0;
+  border: 2px solid transparent; background: #000; cursor: pointer; opacity: .6; transition: opacity .2s, border-color .2s;
+}
+.vmodal__thumb img { width: 100%; height: 100%; object-fit: cover; }
+.vmodal__thumb:hover { opacity: 1; }
+.vmodal__thumb.active { opacity: 1; border-color: var(--gold); }
+.vmodal__close {
+  position: absolute; top: 18px; right: 22px; z-index: 2; width: 46px; height: 46px; border-radius: 50%;
+  border: 1px solid var(--line-soft); background: rgba(255,255,255,.06); color: var(--cream);
+  font-size: 1.7rem; line-height: 1; cursor: pointer; transition: background .2s, border-color .2s, color .2s;
+}
+.vmodal__close:hover { border-color: var(--gold); color: var(--gold); }
+@media (max-width: 560px) { .vmodal__thumb { width: 96px; } }
+
 /* Hide the VIVAKIDS photo caption on mobile */
 @media (max-width: 720px) {
   .viva__visual .hero-card__tag { display: none; }
