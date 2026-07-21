@@ -235,6 +235,73 @@
     document.addEventListener("keydown", (e) => { if (e.key === "Escape" && videoModal.classList.contains("open")) closeVideo(); });
   }
 
+  /* ---------- Audio player (VIVASTUDIO) ---------- */
+  const audioModal = document.getElementById("audioModal");
+  const audioClose = document.getElementById("audioClose");
+  if (audioModal) {
+    const tracks = Array.from(audioModal.querySelectorAll(".track"));
+    const player = new Audio();
+    let current = -1;
+    const fmt = (s) => {
+      if (!isFinite(s)) return "0:00";
+      const m = Math.floor(s / 60), ss = Math.floor(s % 60);
+      return m + ":" + (ss < 10 ? "0" : "") + ss;
+    };
+    const resetTrack = (i) => {
+      tracks[i].classList.remove("playing");
+      tracks[i].querySelector(".track__fill").style.width = "0";
+      tracks[i].querySelector(".track__time").textContent = "0:00";
+    };
+    const play = (i) => {
+      if (i !== current) {
+        if (current > -1) resetTrack(current);
+        current = i;
+        player.src = tracks[i].getAttribute("data-src");
+      }
+      player.play();
+      tracks[i].classList.add("playing");
+    };
+    const pause = () => { player.pause(); if (current > -1) tracks[current].classList.remove("playing"); };
+    tracks.forEach((t, i) => {
+      t.querySelector(".track__play").addEventListener("click", () => {
+        if (i === current && !player.paused) pause();
+        else play(i);
+      });
+    });
+    player.addEventListener("timeupdate", () => {
+      if (current < 0) return;
+      const t = tracks[current];
+      const pct = player.duration ? (player.currentTime / player.duration) * 100 : 0;
+      t.querySelector(".track__fill").style.width = pct + "%";
+      t.querySelector(".track__time").textContent = fmt(player.currentTime);
+    });
+    player.addEventListener("ended", () => {
+      const next = current + 1;
+      resetTrack(current);
+      current = -1;
+      if (next < tracks.length) play(next);
+    });
+    const openAudio = () => {
+      audioModal.classList.add("open");
+      audioModal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    };
+    const closeAudio = () => {
+      audioModal.classList.remove("open");
+      audioModal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      pause();
+    };
+    document.querySelectorAll(".card--audio").forEach((card) => {
+      const act = (e) => { e.preventDefault(); openAudio(); };
+      card.addEventListener("click", act);
+      card.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") act(e); });
+    });
+    audioModal.addEventListener("click", (e) => { if (e.target === audioModal) closeAudio(); });
+    if (audioClose) audioClose.addEventListener("click", closeAudio);
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && audioModal.classList.contains("open")) closeAudio(); });
+  }
+
   /* ---------- Footer year ---------- */
   const yr = document.getElementById("year");
   if (yr) yr.textContent = new Date().getFullYear();

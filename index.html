@@ -235,10 +235,10 @@
           <span class="card__go" aria-hidden="true">Zobacz więcej <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
 
-        <a class="card card--title" href="#contact" data-dir="VIVA STUDIO (nagrania)" data-reveal data-delay="1">
+        <a class="card card--title card--audio" role="button" tabindex="0" data-reveal data-delay="1">
           <span class="card__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
           <h3>VIVASTUDIO</h3>
-          <span class="card__go" aria-hidden="true">Zapisz się <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="card__go" aria-hidden="true">Posłuchaj <svg viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
         </a>
 
         <a class="card card--title card--video" role="button" tabindex="0" data-videos="hAj7-vgWkHQ,4JVkwX9-PSM,Ew5oJqZ3FT4" data-reveal data-delay="2">
@@ -471,6 +471,40 @@
   <div class="vmodal__inner" role="dialog" aria-modal="true" aria-label="Wideo">
     <div class="vmodal__player"><iframe id="videoFrame" src="" title="Wideo TashaProMusic" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
     <div class="vmodal__thumbs" id="videoThumbs"></div>
+  </div>
+</div>
+
+<div class="amodal" id="audioModal" aria-hidden="true">
+  <button class="vmodal__close" id="audioClose" type="button" aria-label="Zamknij">&times;</button>
+  <div class="amodal__inner" role="dialog" aria-modal="true" aria-label="Nasze nagrania">
+    <p class="eyebrow">VIVASTUDIO</p>
+    <h3 class="amodal__title">Nasze nagrania</h3>
+    <ul class="amodal__list">
+      <li class="track" data-src="assets/audio/track1.mp3">
+        <button class="track__play" type="button" aria-label="Odtwórz"><svg class="track__i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg><svg class="track__i-pause" viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></button>
+        <span class="track__name">Розрив ватерлінії</span>
+        <span class="track__bar"><span class="track__fill"></span></span>
+        <span class="track__time">0:00</span>
+      </li>
+      <li class="track" data-src="assets/audio/track2.mp3">
+        <button class="track__play" type="button" aria-label="Odtwórz"><svg class="track__i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg><svg class="track__i-pause" viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></button>
+        <span class="track__name">Мамко моя</span>
+        <span class="track__bar"><span class="track__fill"></span></span>
+        <span class="track__time">0:00</span>
+      </li>
+      <li class="track" data-src="assets/audio/track3.mp3">
+        <button class="track__play" type="button" aria-label="Odtwórz"><svg class="track__i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg><svg class="track__i-pause" viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></button>
+        <span class="track__name">Gdy serce woła, a dusza drży</span>
+        <span class="track__bar"><span class="track__fill"></span></span>
+        <span class="track__time">0:00</span>
+      </li>
+      <li class="track" data-src="assets/audio/track4.mp3">
+        <button class="track__play" type="button" aria-label="Odtwórz"><svg class="track__i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg><svg class="track__i-pause" viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></button>
+        <span class="track__name">W świetle dnia i w mroku nocy</span>
+        <span class="track__bar"><span class="track__fill"></span></span>
+        <span class="track__time">0:00</span>
+      </li>
+    </ul>
   </div>
 </div>
 

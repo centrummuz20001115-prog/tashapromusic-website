@@ -649,6 +649,42 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 .vmodal__close:hover { border-color: var(--gold); color: var(--gold); }
 @media (max-width: 560px) { .vmodal__thumb { width: 96px; } }
 
+/* ---------- Audio modal (VIVASTUDIO) ---------- */
+.card--audio { cursor: pointer; }
+.amodal {
+  position: fixed; inset: 0; z-index: 300; display: none; align-items: center; justify-content: center;
+  padding: 24px; background: rgba(5,4,12,.92); backdrop-filter: blur(8px);
+}
+.amodal.open { display: flex; }
+.amodal__inner {
+  width: min(640px, 100%); max-height: 88vh; overflow-y: auto;
+  background: var(--bg-2); border: 1px solid var(--line-soft); border-radius: 20px;
+  padding: clamp(24px, 4vw, 40px); box-shadow: var(--shadow);
+}
+.amodal__title { font-size: clamp(1.7rem, 3vw, 2.3rem); margin: 6px 0 22px; }
+.amodal__list { display: flex; flex-direction: column; gap: 12px; }
+.track {
+  display: flex; align-items: center; gap: 14px;
+  background: rgba(255,255,255,.04); border: 1px solid var(--line-soft);
+  border-radius: 14px; padding: 12px 16px; transition: border-color .2s, background .2s;
+}
+.track.playing { border-color: var(--gold); background: rgba(231,192,103,.08); }
+.track__play {
+  flex: none; width: 44px; height: 44px; border-radius: 50%; border: none;
+  background: var(--grad-gold); color: #1a1408; display: grid; place-items: center;
+  cursor: pointer; transition: transform .15s;
+}
+.track__play:hover { transform: scale(1.06); }
+.track__play svg { width: 20px; height: 20px; }
+.track__i-pause { display: none; }
+.track.playing .track__i-play { display: none; }
+.track.playing .track__i-pause { display: block; }
+.track__name { flex: 1; min-width: 0; font-weight: 600; color: var(--cream); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.track__bar { flex: none; width: 84px; height: 4px; border-radius: 4px; background: var(--line-soft); overflow: hidden; }
+.track__fill { display: block; width: 0; height: 100%; background: var(--grad-gold); }
+.track__time { flex: none; font-size: 0.85rem; color: var(--muted-2); font-variant-numeric: tabular-nums; min-width: 40px; text-align: right; }
+@media (max-width: 480px) { .track__bar { display: none; } }
+
 /* Hide the VIVAKIDS photo caption on mobile */
 @media (max-width: 720px) {
   .viva__visual .hero-card__tag { display: none; }
